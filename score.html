@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+</head>
+<body>
+    <input type="number" name="dhara" id="dhara" min="0" value="0">
+    <input type="number" name="total" id="total" min="0" value="0">
+<script>
+    const changeListener = (event) => {
+        const totalElement = document.querySelector('#total');
+        totalElement.value = totalElement.valueAsNumber + event.target.valueAsNumber;
+        event.target.value = 0;
+    }
+
+    const scoreElement = document.querySelector('#dhara');
+    scoreElement.addEventListener('change', changeListener);
+</script>
+</body>
+</html>

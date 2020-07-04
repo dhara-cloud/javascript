@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>scoreboard</title>
+</head>
+<body>
+
+    <h3>Victory Board</h3>
+    <br>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Total</th>
+        </tr>
+      <tbody>
+        <tr>
+          <td>dhara</td>
+          <td><input type="number" name="score" id="dhara" value="0"></td>
+          <td><input type="number" name="score" id="total1" value="0"></td>
+        </tr>
+        <tr>
+          <td>Vis</td>
+          <td><input type="number" name="score" id="vis" value="0"></td>
+          <td><input type="number" name="score" id="total2" value="0"></td>
+          </tr> 
+        <tr>
+          <td>San</td>
+          <td><input type="number" name="score" id="san" value="0"></td>
+          <td><input type="number" name="score" id="total3" value="0"></td>
+        </tr>
+        </tbody>
+      </table>
+      <script>
+          const scoreUpdate1 = (event) => {
+            const totalElement1 = document.querySelector('#total1');
+            totalElement1.value = totalElement1.valueAsNumber + event.target.valueAsNumber
+            event.target.value = 0;
+
+          }
+          const matchElement1 = document.querySelector('#dhara');
+          matchElement1.addEventListener('change', scoreUpdate1);
+
+          const scoreUpdate2 = (event) => {
+            const totalElement2 = document.querySelector('#total2');
+            totalElement2.value = totalElement2.valueAsNumber + event.target.valueAsNumber
+            event.target.value = 0;
+
+          }
+          const matchElement2 = document.querySelector('#vis');
+          matchElement2.addEventListener('change', scoreUpdate2);
+
+          const scoreUpdate3 = (event) => {
+            const totalElement3 = document.querySelector('#total3');
+            totalElement3.value = totalElement3.valueAsNumber + event.target.valueAsNumber
+            event.target.value = 0;
+
+          }
+          const matchElement3 = document.querySelector('#san');
+          matchElement3.addEventListener('change', scoreUpdate3);
+        </script>
+    </body>
+</html>
